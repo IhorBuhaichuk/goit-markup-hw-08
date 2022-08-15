@@ -15,6 +15,7 @@
    color: var(--white-txt-cl);
    background-color: var(--blue-bg-cl);
    gap: 10px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
       background-color: #188ce8;
@@ -24,6 +25,4 @@
     margin-top: 0;
   }
  }
- .button-plane:hover {
-  background-color: #188ce8;
- }
+ 
