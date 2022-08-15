@@ -1,0 +1,105 @@
+.addres {
+    @media screen and (min-width: 768px) {
+    @include centeredFlex(flex);
+    flex-wrap: wrap; 
+    flex-direction: column;
+    margin-right: 165px;
+    margin-bottom: 60px;
+   }
+
+    @media screen and (min-width: 1200px) {
+      @include justFlex(flex);
+      margin-right: 70px;
+      flex-direction: column;  
+      align-items: baseline;
+      margin-bottom: 0;
+   }
+ }
+ 
+ .addres__link--wrap {
+    @extend %reset-link;
+    @include fonts(24px, 28px, 700);
+    font-family: var(--secondary-font);
+    color: var(--additional-txt-cl);
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 480px) {
+      display: block;
+      text-align: center;     
+    }
+
+    @media screen and (min-width: 768px) {
+      @include justFlex(flex);
+    }
+
+    @media screen and (min-width: 1200px) {
+    @include justFlex(flex);
+    @include fonts(26px, 31px, 700);
+ }
+ }
+ 
+ .addres__span {
+   color: var(--white-txt-cl);
+ }
+ 
+ .addres__list {
+  @extend %reset-list;
+  
+   margin: 0;
+ }
+
+ .addres__link--color {
+   @extend %reset-link;
+   @include fonts(14px, 24px);
+   font-style: normal;
+   color: var(--white-txt-cl);
+   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+   @media screen and (min-width: 480px) {
+    display: block;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    @include justFlex(flex);  
+  }
+  
+  @media screen and (min-width: 1200px) {
+    @include justFlex(flex);
+  }
+
+   &:hover,
+   &:focus {
+     color: var(--additional-txt-cl);
+   }
+ }
+ 
+ .addres__link {
+  @extend %reset-link;
+  @include fonts(14px, 24px);
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.6);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: 480px) {
+    display: block;
+    text-align: center;
+    margin-top: 8px;
+  }
+
+  @media screen and (min-width: 768px) {
+    @include justFlex(flex);
+    justify-content: center;
+  }
+  
+  @media screen and (min-width: 1200px) {
+    @include justFlex(flex);
+    justify-content: start;
+  }
+
+   &:hover,
+   &:focus {
+     color: var(--additional-txt-cl);
+   }
+ }
+ 

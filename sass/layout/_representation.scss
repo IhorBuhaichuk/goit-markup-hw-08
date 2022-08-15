@@ -1,0 +1,22 @@
+.representation {
+   padding: 20px 24px;
+   border: 1px solid #eeeeee;
+   border-top: none;
+   width: 100%;
+   background-color: var(--additional-bg-cl);
+ }
+ 
+ .representation__title {
+  @include fonts(18px, 36px, 700, 0.06em);
+
+   margin-bottom: 4px;
+ }
+ 
+ .representation__text {
+  @include fonts(16px, 30px);
+
+   color: var(--grey-txt-cl);
+ 
+   margin-top: 0;
+   margin-bottom: 0;
+ }

@@ -1,0 +1,245 @@
+/* Modal window */
+
+.backdrop {
+   position: fixed;
+   top: 0;
+   right: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.2);
+   visibility: visible;
+   opacity: 1;
+   pointer-events: initial;
+   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 200ms;
+ }
+ 
+ .backdrop.is-hidden {
+   opacity: 0;
+   pointer-events: none;
+ }
+ 
+ .modal {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   min-height: 609px;
+   transform: translate(-50%, -50%) scale(1) rotate(0);
+   padding: 40px;
+   background-color: var(--additional-bg-cl);
+   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+     0px 2px 1px rgba(0, 0, 0, 0.2);
+   border-radius: 4px;
+   opacity: 1;
+   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 200ms,
+     opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 200ms;
+
+     @media screen and (max-width: 1199px) {
+      max-width: 450px;
+    }
+
+     @media screen and (min-width: 1200px) {
+      width: 528px;
+      min-height: 581px;
+    }
+ }
+ 
+ .backdrop.is-hidden .modal {
+   opacity: 0;
+   transform: translate(-50%, -50%) scale(0.3) rotate(360deg);
+ }
+ 
+ .modal__btn {
+   position: absolute;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 30px;
+   height: 30px;
+   border-radius: 50%;
+   border: 1px solid rgba(0, 0, 0, 0.1);
+   background-color: var(--additional-bg-cl);
+   top: 8px;
+   right: 8px;
+   padding: 0;
+   cursor: pointer;
+   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus,
+  &:hover {
+     fill: var(--blue-bg-cl);
+   }
+ }
+
+ //  forms
+
+.register-form {
+  text-align: center;
+}
+
+.register-form__title {
+  @include fonts(20px, 23px, 700);
+
+  display: block;
+  text-align: center;
+  color: var(--main-txt-cl);
+  margin-bottom: 12px;
+}
+
+.register-form__container--group {
+  @include justFlex(flex);
+
+  flex-direction: column;
+}
+
+.register-form__label {
+  @include justFlex(flex);
+
+  position: relative;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.register-form__label:first-child {
+  margin-top: 0;
+}
+
+.register-form__span {
+  @include justFlex(flex);
+  @include fonts(12px, 14px, 0.01em);
+
+  margin-bottom: 4px;
+  color: var(--grey-txt-cl);
+}
+
+.register-form__input {
+  height: 40px;
+  width: 370px;
+  padding-left: 40px;
+  padding-right: 5px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: transparent;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+&:focus,
+&:hover {
+  border: 1px solid #2196f3;
+}
+
+&:focus + .register-form__icon,
+&:hover + .register-form__icon {
+  fill: var(--blue-bg-cl);
+}
+
+@media screen and (min-width: 1200px) {
+  width: 448px;
+}
+}
+
+.register-form__icon {
+  @include justFlex(flex);
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translate(12px, -11px);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.register-form__textarea {
+  @include justFlex(flex);
+
+  width: 370px;
+  height: 120px;
+  padding: 12px 16px;
+  outline: transparent;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+&:focus,
+&:hover {
+  border: 1px solid #2196f3;
+}
+
+&::placeholder {
+  @include fonts(12px, 14px, 0.01em);
+
+  font-family: 'Roboto';
+  color: rgba(117, 117, 117, 0.5);
+}
+
+@media screen and (min-width: 1200px) {
+  width: 448px;
+}
+}
+
+.register-form__checkbox {
+  @include centeredFlex(flex);
+
+  margin-top: 20px;
+  margin-bottom: 30px;
+  gap: 8px;
+}
+
+.register-form__input--checkbox:checked
+  + .register-form__icon--checkbox
+  .register-form__icon--uncheck {
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.register-form__icon--check {
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.register-form__input--checkbox:checked
+  + .register-form__icon--checkbox
+  .register-form__icon--check {
+  opacity: 1;
+}
+
+.register-form__span--checkbox {
+  @include justFlex(flex);
+  @include fonts(12px, 14px);
+    
+  color: var(--grey-txt-cl);
+  user-select: none;
+
+  @media screen and (min-width: 1200px) {
+    @include fonts(14px, 24px);
+  }
+}
+
+.register-form__link {
+  margin-left: 3px;
+  @include fonts(12px, 14px);
+  color: var(--additional-txt-cl);
+  text-underline-position: under;
+
+  @media screen and (min-width: 1200px) {
+    @include fonts(14px, 24px);
+  }
+}
+
+.register-form__button {
+  @include centeredFlex(inline-flex);
+  @include fonts(16px, 30px, 700, 0.06em);
+
+  width: 200px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #188ce8;
+  color: var(--white-txt-cl);
+
+&:hover,
+&:focus {
+  background-color: var(--blue-bg-cl);
+}
+}

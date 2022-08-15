@@ -1,0 +1,19 @@
+.logo {
+  @extend %reset-link;
+  @include justFlex(flex);
+  @include fonts(24px, 28px, 700);
+  font-family: var(--secondary-font);
+  color: var(--additional-txt-cl);
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-right: 87px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include fonts(26px, 31px, 700);
+    margin-right: 93px;
+  }
+ }
+ .logo__span {
+   color: var(--black-txt-cl);
+ }

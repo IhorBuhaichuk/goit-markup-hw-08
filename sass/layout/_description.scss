@@ -1,0 +1,30 @@
+.description {
+  display: block;
+ }
+ 
+ .description__title {
+  @include fonts(14px, 16px, 700);
+  margin-top: 30px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  @include centeredFlex(flex);
+
+  @media screen and (min-width: 768px){
+    @include justFlex(flex);
+    justify-content: start;
+
+  }
+
+   @media screen and (min-width: 1200px) {
+    @include justFlex(flex);
+    flex-direction: column;
+    align-items: flex-start; 
+    justify-content: start;
+   }
+ }
+ 
+ .description__text {
+  @include fonts(14px, 24px);
+
+   color: var(--grey-txt-cl);
+ }
