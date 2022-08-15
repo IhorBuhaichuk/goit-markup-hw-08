@@ -642,6 +642,9 @@ p {
   cursor: pointer;
   color: var(--white-txt-cl);
 }
+.hero__btn:hover {
+  background-color: #188ce8;
+}
 @media screen and (min-width: 1200px) {
   .hero__btn {
     padding: 10px 32px;
@@ -1288,6 +1291,10 @@ p {
   border-radius: 4px;
   background-color: var(--blue-bg-cl);
   color: var(--white-txt-cl);
+}
+
+.filters__button-current {
+  background-color: #2196F3;
 }
 
 .project__list {
@@ -1941,10 +1948,17 @@ p {
   background-color: var(--blue-bg-cl);
   gap: 10px;
 }
+.button-plane:hover {
+  background-color: #188ce8;
+}
 @media screen and (min-width: 1200px) {
   .button-plane {
     margin-top: 0;
   }
+}
+
+.button-plane:hover {
+  background-color: #188ce8;
 }
 
 /* Modal window */

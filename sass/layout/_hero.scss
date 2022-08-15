@@ -70,8 +70,14 @@
   text-align: center;
   cursor: pointer;
   color: var(--white-txt-cl);
+  
+  &:hover {
+    background-color: #188ce8;
+  }
 
   @media screen and (min-width: 1200px) {
     padding: 10px 32px;
   }
 }
+
+

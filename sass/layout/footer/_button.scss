@@ -16,7 +16,14 @@
    background-color: var(--blue-bg-cl);
    gap: 10px;
 
+  &:hover {
+      background-color: #188ce8;
+    }
+
   @media screen and (min-width: 1200px){
     margin-top: 0;
   }
+ }
+ .button-plane:hover {
+  background-color: #188ce8;
  }
