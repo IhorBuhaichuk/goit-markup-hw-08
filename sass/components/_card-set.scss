@@ -9,4 +9,5 @@
 
   .card-set-project {
    flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+   gap: 30px;
   }

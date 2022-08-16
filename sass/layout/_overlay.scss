@@ -35,6 +35,6 @@
  .overlay__text {
   @include fonts(18px, 28px);
 
-   text-align: center;
    color: var(--white-txt-cl);
+   text-align: left;
  }

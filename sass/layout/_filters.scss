@@ -1,20 +1,22 @@
 .filters {
   @extend %reset-list;
-  @include centeredFlex(flex);
+  flex-wrap: wrap;
+  display: flex;
   gap: 8px;
   margin-top: 0;
   margin-bottom: 40px;
 
   @media screen and (max-width: 480px) {
-    @include justFlex(flex);
     justify-content: start;
-    flex-wrap: wrap;
+    
     height: 91px;
     width: 326px;
   }
 
   @media screen and (min-width: 768px) {
-    margin-bottom: 14px;
+    margin-bottom: 30px;
+    text-align: center;
+    justify-content: center;
   }
 
   @media screen and (min-width: 1200px) {
