@@ -17,6 +17,7 @@
  
  .clients__title--indent {
     @include centeredFlex(flex);
+    align-items: center;
     @include fonts(28px, 33px, 700);
     margin-bottom: 30px;
 
@@ -24,6 +25,7 @@
     @include centeredFlex(flex);
     @include fonts(36px, 42px, 700);
     margin-bottom: 50px;
+
    }  
  }
  

@@ -22,10 +22,12 @@
     font-family: var(--secondary-font);
     color: var(--additional-txt-cl);
     margin-bottom: 20px;
+    text-align: center;
+    display: block;
 
     @media screen and (min-width: 480px) {
-      display: block;
-      text-align: center;     
+      
+         
     }
 
     @media screen and (min-width: 768px) {
@@ -46,6 +48,9 @@
   @extend %reset-list;
   
    margin: 0;
+   display: flex;
+   text-align: center;
+   flex-direction: column
  }
 
  .addres__link--color {

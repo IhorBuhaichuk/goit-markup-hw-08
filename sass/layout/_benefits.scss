@@ -39,7 +39,6 @@
   background-color: var(--additional-bg-cl);
   @include centeredFlex(flex);
   
-
   @media screen and (min-width: 768px){
     max-width: 354px;
   }
@@ -57,7 +56,8 @@
 .benefits__link {
   background-color: var(--grey-bg-additional-cl);
   @include centeredFlex(flex);
-  padding: 25px 142px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 
   @media screen and (min-width: 768px){
     padding: 25px 142px;

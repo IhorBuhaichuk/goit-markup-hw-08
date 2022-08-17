@@ -17,8 +17,11 @@
   margin-bottom: 30px;
 
    @media screen and (min-width: 1200px) {
-    @include fonts(28px, 33px, 700);
     margin-bottom: 50px;
+    font-weight: 700;
+      font-size: 36px;
+      line-height: calc(42 / 36);
+      letter-spacing: 0.03em;
   }
  }
  
