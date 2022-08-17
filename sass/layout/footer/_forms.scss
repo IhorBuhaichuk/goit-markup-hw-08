@@ -85,6 +85,16 @@
       padding-bottom: 15px;
       color: rgba(255, 255, 255, 0.6);
     }
+
+        @media screen and (min-width: 768px) {
+          width: 450px;
+        }
+    
+        @media screen and (min-width: 1200px) {
+          @include justFlex(flex);
+          width: 358px;
+      
+        }
  }
  
  .footer-form__icon {
